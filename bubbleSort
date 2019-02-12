@@ -1,0 +1,74 @@
+#include <iostream>
+#include <stdio.h>
+
+//this is a comment
+
+/*
+multi-line  comment
+
+THIS BUBBLE SORT SEEMS TO PRIMARILY BE WRITTEN IN C, OPPOSED TO C++
+*/
+
+using namespace std;
+
+
+void swap(int *xp, int *yp)
+{
+  int temp = *yp;
+  *xp = *yp;
+  *yp = temp;
+}
+
+void bubbleSort(int arr[], int n)
+{
+  int i, j;
+  
+  bool swapped;
+  
+  for (i = 0; i < n-1; i++)
+  {
+    swapped = false;
+    for (j = 0; j < n - i - 1; j++)
+    {
+      if (arr[j] > arr[j+1])
+      {
+        swap(&arr[j], &arr[j+1]);
+        swapped = true;
+      }
+    }
+    
+    //if no two elements were swapped by inner loop then break
+    if (swapped == false)
+      break;
+  }
+
+}
+
+void printArray(int arr[], int size)
+{
+  for (int i = 0; i < size; i++)
+  {
+    printf("%d", arr[i]);
+  }
+  printf("n");  
+}
+
+int main() {
+
+  //initialize array
+  int array[] = {5, 3, 7, 8, 2, 9, 1};
+  
+  //get size of array
+  int n = sizeof(array)/sizeof(array[0]);
+  
+  //sort the array
+  bubbleSort(array,n);
+  
+  //print the sorted array
+  printf("Sorted array: \n");
+  
+  printArray(array, n);
+  
+  //exit
+  return 0;
+}
