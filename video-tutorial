@@ -3,7 +3,110 @@
 #include <string>
 #include <fstream>
 
+using namespace std;
+
 int main() {
 
+  cout << "Hello World" << endl;
+  
+  const double PI = 3.1415926535;
+  
+  char myGrade = 'A';  //takes up 1 byte of memory
+  
+  bool isHappy = true;
+  
+  int myAge = 21;
+  
+  float favNum = 3.141592;
+  
+  double otherfavNum = 3.1415926535;
+  
+  cout << "Favorite number " << favNum << endl;
+  
+  cout << "Size of int " << sizeof(myAge) << endl;
+  cout << "Size of char "<< sizeof(myGrade) << endl;
+  cout << "Size of bool "<< sizeof(isHappy) << endl;
+  cout << "Size of float "<< sizeof(favNum) << endl;
+  cout << "Size of double " << sizeof(otherfavNum) << endl;
+  
+  int largestInt = 21123123;
+  
+  cout << "Largest int " << largestInt << endl;
+  
+  //modulus (%) returns remainder of division
+  
+  cout << "\n";
 
+  cout << "4 / 5 = " << 4/5 << endl;
+  
+  cout << "4 / 5 = " << (float) 4/5 << endl;
+  
+///////////
+
+  int age = 70;
+  
+  int ageatlastexam = 16;
+  
+  bool isNotIntoxicated = true;
+  
+  if ((age >= 1) && (age < 16)){
+    cout << "You cannot drive." << endl;
+  
+  } else if(! isNotIntoxicated){
+    cout << "You cannot drive." << endl;
+    
+  } else if (age >= 80 && ((age > 100) || ((age - ageatlastexam) > 5))){
+    cout << "You cannot drive." << endl;
+    
+  } else {
+  
+    cout << "You can drive." << endl;
+    
+  }
+  
+////////////
+
+  int greetingOption = 3;
+  
+  switch(greetingOption){
+    
+    case 1:
+      cout << "bonjour" << endl;
+      break;
+      
+    case 2:
+      cout << "hola"<< endl;
+      break;
+      
+    default:
+      cout << "Hello" << endl;
+      
+   }
+   
+
+///////////
+
+
+    //variable = (condition) ? true : FALSE
+    
+    int largestNum = (5>2) ? 5 : 2;
+    
+    cout << largestNum << endl;
+    
+    
+    
+////////////
+
+    int myFavNums[5];
+    
+    int badNums[5] = {4, 13, 14, 24, 34};
+    
+    cout << "Bad Number 1: " << badNums[0] << endl;
+    
+    char myName[2][6] = {{'C', 'o', 'r', 'b', 'a', 'n'},{'J','o','y','c','e'}};
+    
+    cout << myName[1][2] << endl;
+    
+    
+  return 0;
 }
