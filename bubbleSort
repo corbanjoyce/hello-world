@@ -52,7 +52,7 @@ void printArray(int arr[], int size)
   {
     printf("%d ", arr[i]);
   }
-  printf("n");  
+  printf("\n");  
 }
 
 int main() {
