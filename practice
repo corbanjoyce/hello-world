@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <random>
+#include <sstream>
+#include <fstream>
+
+using namespace std;
+
+int main(){
+  cout << "Hello World!\n";
+  
+  return 0;
+}
